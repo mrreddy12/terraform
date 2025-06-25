@@ -4,7 +4,7 @@
 
 
 
-resource "aws_instance" "roboshop" {
+resource "aws_instance" "create_instance" {
   //ami           = "ami-09c813fb71547fc4f"  //wihtou out variable
   ami           =  var.ami_id  //with vairable
   instance_type = "t3.micro"

@@ -2,11 +2,6 @@ variable "project" {
     default = "roboshop"
 }
 
-#get from tf vars
-variable "environment" {
-    
-}
-
 
 variable "common_tags"{
     default = {
@@ -46,7 +41,9 @@ variable "ami_id" {
   description = "AMI ID of joindevops RHEL9"
 }
 
-# get from tf vars
 variable "instance_type" {
-    
+    default = {
+        qa = "t3.micro"
+        prod = "t3.small"
+    }
 }

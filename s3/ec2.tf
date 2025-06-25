@@ -16,6 +16,7 @@ resource "aws_instance" "roboshop" {
   tags = {
     #Name = "mongo"  //instance name
      Name = var.instances[count.index]  //instance name
+     
   }
 }
 

@@ -1,9 +1,10 @@
+
 terraform {
      backend "s3" {
 bucket = "mr-remote-state-bucket"
-key    = "tfvars-demo"
+key    = "module-prod-statefile"
 region = "us-east-1"
-encrypt        = true
+encrypt= true
 use_lockfile = true
-}
+     }
 }

@@ -2,11 +2,11 @@
 
 
 
-resource "aws_instance" "roboshop" {
+resource "aws_instance" "create_instance" {
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.micro"
   //resourcetype.resourncename.id ..creted security group below...spec
-    vpc_security_group_ids = [aws_security_group.allow_all.id]
+    vpc_security_group_ids = [aws_security_group.allow_all.id]//getting id from below script
   tags = {
     Name = "HelloWorld"
   }

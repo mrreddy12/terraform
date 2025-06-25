@@ -6,17 +6,16 @@ terraform {
     }
   }
 
-    backend "s3" {
-    bucket = "mr-remote-state-bucket"  #bucket name
-    key    = "mr-remote-state-key"  # state file name
+  backend "s3" {
+   bucket = "mr-remote-state-bucket"
+    key    = "roboshop-dev-sg"
     region = "us-east-1"
-    encrypt = true
+    encrypt        = true
     use_lockfile = true
   }
-
 }
 
 provider "aws" {
   # Configuration options
+  region = "us-east-1"
 }
-
