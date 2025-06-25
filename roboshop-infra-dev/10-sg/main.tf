@@ -4,7 +4,9 @@
 module "frontend" {
 
     #source = "git::https://github.com/daws-84s/terraform-aws-securitygroup.git?ref=main"
-       source = "../../modules-/terraform-aws-securitygroup"
+    source = "git::https://github.com/mrreddy12/terraform.git//modules-//terraform-aws-securitygroup?ref=master"
+
+      # source = "../../modules-/terraform-aws-securitygroup"
     project = var.project
     environment = var.environment
 
