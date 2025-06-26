@@ -2,8 +2,9 @@ output "vpc_id" {
   value       = aws_vpc.main.id
 }
 
+//for bastian created below 3
 output "public_subnet_ids" {
-  value = aws_subnet.public[*].id
+  value = aws_subnet.public[*].id # means it will get all subnets ids..based on no.of subnets
 }
 
 output "private_subnet_ids" {
